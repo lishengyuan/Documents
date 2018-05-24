@@ -23,41 +23,41 @@
 
 1. 解压安装包
 	<pre>
-		tar –zxvf mongodb-linux-x86_64-rhel70-2.6.7.tgz
+	tar –zxvf mongodb-linux-x86_64-rhel70-2.6.7.tgz
 	</pre>
 
 
 2. 把安装包移动到 /usr/local/下
 
 	<pre>
-		mv mongodb-linux-x86_64-rhel70-2.6.7 /usr/local/mongodb
-		cd /usr/local/mongodb
+	mv mongodb-linux-x86_64-rhel70-2.6.7 /usr/local/mongodb
+	cd /usr/local/mongodb
 	</pre>
 
 3. 新建目录data/db和logs
 
 	<pre>
-		mkdir -p data/db
-		mkdir logs
+	mkdir -p data/db
+	mkdir logs
 	</pre>
 
 4. 然后在/usr/local/mongodb/bin下新建一个mongodb的配置文件
 
 	<pre>
-		cd /usr/local/mongodb/bin
-		touch mongodb.conf
-		vi mongodb.conf
+	cd /usr/local/mongodb/bin
+	touch mongodb.conf
+	vi mongodb.conf
 	</pre>
 
 	按一下解盘i 启用编辑
 	把下面配置复制上去
 	
 	<pre>
-		dbpath=/usr/local/mongodb/db 
-		logpath=/usr/local/mongodb/logs/mongodb.log 
-		port=27017 
-		fork=true 
-		nohttpinterface=true
+	dbpath=/usr/local/mongodb/db 
+	logpath=/usr/local/mongodb/logs/mongodb.log 
+	port=27017 
+	fork=true 
+	nohttpinterface=true
 	</pre>
 	按esc键然后输入:wq 回车。保存退出
 5. 然后用配置文件启动
