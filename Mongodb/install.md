@@ -13,10 +13,10 @@
 
 * 打开CMD命令行,cd 到putty的安装目录
 
-<pre>
-cd C:\Program Files\PuTTY
-pscp C:\MongoDBTool\mongodb-linux-x86_64-rhel70-2.6.7.tgz lisheng@oac-lxmdcmdb204:/home/lisheng
-</pre>
+	<pre>
+	cd C:\Program Files\PuTTY
+	pscp C:\MongoDBTool\mongodb-linux-x86_64-rhel70-2.6.7.tgz lisheng@oac-lxmdcmdb204:/home/lisheng
+	</pre>
 
 回车后输入Linux服务器的登录密码
 ## 安装MongoDB
@@ -67,19 +67,19 @@ pscp C:\MongoDBTool\mongodb-linux-x86_64-rhel70-2.6.7.tgz lisheng@oac-lxmdcmdb20
 ## MongoDB数据备份
 
 * mongodump命令备份数据库
-<pre>
-mongodump -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -o 文件存在路径
-//如果没有用户，可以去掉-u和-p。
-//如果导出本机的数据库，可以去掉-h。
-//如果是默认端口，可以去掉--port。
-//如果想导出所有数据库，可以去掉-d。
-//如果不指定-o，文件备份在当前目录下
-</pre>
+	<pre>
+	mongodump -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -o 文件存在路径
+	//如果没有用户，可以去掉-u和-p。
+	//如果导出本机的数据库，可以去掉-h。
+	//如果是默认端口，可以去掉--port。
+	//如果想导出所有数据库，可以去掉-d。
+	//如果不指定-o，文件备份在当前目录下
+	</pre>
 * mongorestore还原数据库
-<pre>
-mongorestore -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 --drop 文件存在路径
-//--drop的意思是，先删除所有的记录，然后恢复。
-</pre>
+	<pre>
+	mongorestore -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 --drop 文件存在路径
+	//--drop的意思是，先删除所有的记录，然后恢复。
+	</pre>
 
 ## 启用身份认证
 
