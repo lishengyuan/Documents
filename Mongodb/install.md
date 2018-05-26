@@ -1,4 +1,13 @@
 ﻿# 在Liunx Server上安装MongoDB
+## 目录
+
+>1. [安装连接Linux server的工具](#安装连接Linux-server的工具)
+>2. [下载Mongodb for Linux server安装包](#下载Mongodb-for-Linux-server安装包)
+>3. [把mongodb安装包从本地传输到服务器](#把mongodb安装包从本地传输到服务器)
+>4. [安装](#安装MongoDB)
+>5. [数据备份](#MongoDB数据备份)
+>6. [启用身份认证](#启用身份认证)
+
 ## 安装连接Linux server的工具
 1. mRemoteNG.exe
 2. PuTTY
