@@ -5,7 +5,7 @@
 3. SecurityCRT
 
 ## 下载Mongodb for Linux server安装包
-到官网下载Linxu安装包 [Download Link](https://www.mongodb.com/download-center#previous)
+到官网下载Linux安装包 [Download Link](https://www.mongodb.com/download-center#previous)
 
 > 例如 mongodb-linux-x86_64-rhel70-2.6.7.tgz
 
