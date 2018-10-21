@@ -1,6 +1,6 @@
 ## Mongodb 定时备份
 
-1. 新建备份目录/脚本文件
+1. **新建备份目录/脚本文件**
 
     <pre>
     cd /usr/local/mongodb/
@@ -14,7 +14,7 @@
     touch MongodbBackup.crontab
     </pre>
     
-2. 编辑备份脚本
+2. **编辑备份脚本**
 
     <pre>
     vi /usr/local/mongodb/backup/backup.sh
@@ -43,7 +43,7 @@
         echo "backup end `date '+%Y-%m-%d %H:%M:%S'`"
 
 
-3. 编辑 删除过期备份文件脚本
+3. **编辑 删除过期备份文件脚本**
         <pre>
         vi /usr/local/mongodb/backup/remove_expire_data.sh
         </pre>
@@ -75,7 +75,7 @@ Ctrl+c复制下面 3.1 处的脚本，然后右键把内容粘贴到remove_expir
 
         done
 
-4. 编辑定时任务脚本
+4. **编辑定时任务脚本**
 
     <pre>
     vi /usr/local/mongodb/backup/MongodbBackup.crontab
@@ -89,12 +89,12 @@ Ctrl+c复制下面 3.1 处的脚本，然后右键把内容粘贴到remove_expir
    0 0 * * * /usr/local/mongodb/backup/remove_expire_data.sh >>/usr/local/mongodb/backup/log/remove_$(date +"\%Y\%m\%d\%H\%M\%S").log 2>&1
    </pre>
 
-5. 把定时任务脚本添加到定时任务中
+5. **把定时任务脚本添加到定时任务中**
    <pre>
    crontab /usr/local/mongodb/backup/MongodbBackup.crontab
    </pre>
 
-6. 验证定时任务是否启动
+6. **验证定时任务是否启动**
    <pre>
    crontab –l
    </pre>
