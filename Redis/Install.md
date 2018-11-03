@@ -21,3 +21,14 @@
     <pre>
     src/redis-server redis.conf
     </pre>
+5. 开启防火墙
+    <pre>
+    firewall-cmd --permanent --zone=public --add-port=6379/tcp //永久
+    firewall-cmd --zone=public --add-port=6379/tcp //临时
+    </pre>
+6. 设置系统开机自启动
+
+编辑/etc/rc.d/rc.local,在文件后面加上如下这行
+<pre>
+/opt/redis/redis-5.0.0/src/redis-server /opt/redis/redis-5.0.0/redis.conf
+</pre>

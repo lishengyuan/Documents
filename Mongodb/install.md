@@ -73,6 +73,12 @@
 	<pre>
 	./mongod –f mongodb.conf
 	</pre>
+6. 设置系统开机自启动
+
+	编辑/etc/rc.d/rc.local,在文件后面加上如下这行
+	<pre>
+	/usr/local/mongodb/bin/mongod --config /usr/local/mongodb/bin/mongodb.conf
+	</pre>
 ## MongoDB数据备份
 
 1. mongodump命令备份数据库
