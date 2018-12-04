@@ -3,7 +3,9 @@
 `Mongodb 官方不推荐使用master-slaver模式，并且Master-slaver的master 宕机后，slaver不会制动切换成master.ReplSet 官方建议奇数个实例，最少需要3个实例`
 1. 新建实例的db log pid目录
    mkdir /usr/local/mongodb/data/db1
+
    mkdir /usr/local/mongodb/data/db2
+   
    mkdir /usr/local/mongodb/data/db3
 
    mkdir /usr/local/mongodb/log
